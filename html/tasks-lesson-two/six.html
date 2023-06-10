@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+     //Задача 6. З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. 
+    //Обчислити вартість кожного товару окремо та загальну вартість. 
+    //Вивести чек (як у супермаркеті) використовуючи елементи розмітки.
+    const pantsAmount = parseInt(prompt('Скільки штанів в наявності?'));
+    let onePairOfPantsCost = parseFloat(prompt('Ціна однієї пари штанів:')).toFixed(2);
+    let totalPantsCost = pantsAmount * onePairOfPantsCost;
+    const socksAmount = parseInt(prompt('Скільки носків в наявності?'));
+    let onePairOfSocksCost = parseFloat(prompt('Ціна однієї пари носків:')).toFixed(2);
+    let totalSocksCost = socksAmount * onePairOfSocksCost;
+    const hatsAmount = parseInt(prompt('Скільки шляп в наявності?'));
+    let oneHatCost = parseFloat(prompt('Ціна однієї шляпи:')).toFixed(2);
+    let totalHatsCost = hatsAmount * oneHatCost;
+    //чек
+    document.write(`
+    <table>
+  <tr>
+    <th>Товар:</th>
+    <th>К-сть:</th>
+    <th>Ціна:</th>
+  </tr>
+  <tr>
+    <td>Штани</td>
+    <td>${pantsAmount}</td>
+    <td>${totalPantsCost}</td>
+  </tr>
+  <tr>
+    <td>Носки</td>
+    <td>${socksAmount}</td>
+    <td>${totalSocksCost}</td>
+  </tr>
+  <tr>
+    <td>Шляпи</td>
+    <td>${hatsAmount}</td>
+    <td>${totalHatsCost}</td>
+  </tr>
+</table>
+    `)
+</script>
+</body>
+</html>

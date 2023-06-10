@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //Задача 3. Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ (5% від загальної вартості).
+    let amountOfProducts = parseInt(prompt('What is the amount of product we have?'));
+    let productPrice = parseFloat(prompt('What is the cost of one product?')).toFixed(2);
+    let totalCost = parseFloat(productPrice * amountOfProducts);
+    let valueAddedTax =  totalCost / 100 * 5;
+    console.log(`Загальна вартість: ${totalCost}. ПВД: ${valueAddedTax}`);
+
+</script>
+</body>
+</html>

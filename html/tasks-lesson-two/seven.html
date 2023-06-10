@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //Задача 7. Знайти суму випадкового номера місяця (від 1 до 12) та випадкового номера дня (від 0 до 6).
+    let minFirst = 1;
+    let maxFirst = 12;
+    // ------------------
+    let minSecond = 1;
+    let maxSecond = 12;
+    let randomFloatOne = Math.random() * (maxFirst - minFirst) + minFirst;
+    let randomFloatTwo = Math.random() * (maxFirst - minSecond) + minSecond;
+    document.write(parseInt(randomFloatOne + randomFloatTwo));
+</script>
+</body>
+</html>

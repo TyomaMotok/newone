@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="icon" type="image/png" href="img/JavaScript.png">
+    <title>LSOne</title>
+</head>
+<body>
+    <div class="lessons">
+        <a href="html/two.html" class="lesson">Lesson 2</a>
+    </div>
+</body>
+<script>
+    let lessons = document.querySelector('.lessons');
+    let lessonsChildren = lessons.children;
+    for (let i = 0; i < lessonsChildren.length; i++) {
+        if ((i + 1) % 2 === 0) {
+            let childElement = lessonsChildren[i];
+            childElement.style.cssText = `background-color: #77608d;`;
+        }
+    }
+</script>
+</html>
