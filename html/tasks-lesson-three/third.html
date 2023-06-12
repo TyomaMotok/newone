@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var random = Math.floor(Math.random() * 5) + 1;
+    console.log(random)
+    let attempts = 2;
+    let answer = parseInt(prompt(`Спробуй вгадати число в тебе залишилось ${attempts} спроби;`));
+    if(random != answer){
+        attempts--;
+        answer = prompt(`Спробуй знову, в тебе залишилось ${attempts} спроба!`);
+        if(random != answer){
+            console.log('Нажаль, ви програли!');
+        }else if(random == answer){
+        document.write('My congrats, you have won the game!')
+    }
+    }else if(random == answer){
+        document.write('My congrats, you have won the game! З першої спроби!!')
+    };
+</script>
+</body>
+</html>

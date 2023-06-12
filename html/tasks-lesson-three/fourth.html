@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+   let usersAge = parseInt(prompt('Скільки вам років?'));
+
+switch (true) { 
+  case usersAge < 3:
+    alert('Ви мала дитина');
+    break;
+  case usersAge <= 5:
+    alert('Ви в садочку');
+    break;
+  case usersAge <= 16:
+    alert('Ви школяр');
+    break;
+  case usersAge <= 30:
+    alert('Ви студент');
+    break;
+  case usersAge <= 65:
+    alert('Ви працівник');
+    break;
+  case usersAge > 65:
+    alert('Ви пенсіонер');
+    break;
+  default:
+    alert('Невідомий вік');
+    break;
+}
+</script>
+</body>
+</html>

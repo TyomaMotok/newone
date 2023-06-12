@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let firstChildName = prompt('Як звуть першу дитину?');
+    let amountOfCandiesForFirstChild = parseInt(prompt('Скільки цукерок було отримано?'));
+    let secondChildName = prompt('Як звуть другу дитину?');
+    let amountOfCandiesForSecondChild = parseInt(prompt('Скільки цукерок було отримано?'));
+
+    let nameValidationFirstName = parseInt(firstChildName);
+    let nameValidationSecondName = parseInt(secondChildName);
+
+    if(amountOfCandiesForFirstChild > amountOfCandiesForSecondChild){
+        document.write(`${firstChildName}, отримав/ла більше цукерок! Мої вітання!`)
+    }else if(amountOfCandiesForSecondChild > amountOfCandiesForFirstChild){
+        document.write(`${secondChildName}, отримав/ла більше цукерок! Мої вітання!`)
+    }else if(nameValidationFirstName || nameValidationSecondName){
+        console.log('Помилка!')
+    }
+</script>
+</body>
+</html>
