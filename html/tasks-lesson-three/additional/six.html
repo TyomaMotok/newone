@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Полювання. Заєць знаходиться у верхньому лівому кутку поля. Поле складається з двох рядків і двох стовпців.
+        // За один крок заєць може стрибнути у будь-яку із вільних клітинок. Користувач ставить пастку вказуючи номер рядка і стовпця клітинки. Якщо заєць потрапляє у пастку, то користувач виграв і отримав 100 балів. Якщо користувач зловить зайця за другою спробою, то одержує 50 балів. 
+        let rabbitInitialPosition = 1;
+        min = 1;
+        max = 4;
+        let random = Math.floor(Math.random() * (max - min + 1)) + min;
+        let usersTrapColumn = parseInt(prompt('Вкажіть стовбчик в якому хочете покласти пастку'));
+        let usersTrapRow = parseInt(prompt('Вкажіть рядок в якому хочете покласти пастку'));
+        let userTrapResult;
+
+        if(usersTrapColumn == 1 && usersTrapRow == 1){
+            userTrapResult = 1;
+        }else if(usersTrapColumn == 2 && usersTrapRow == 1){
+            userTrapResult = 2;
+        }else if(usersTrapColumn == 1 && usersTrapRow == 2){
+            userTrapResult = 3;
+        }else if(usersTrapColumn == 2 && usersTrapRow == 2){
+            userTrapResult = 4;
+        }
+
+        if(userTrapResult == rabbitInitialPosition){
+            console.log('Заєць попав в вашу пастку! Ви отримали: 100 балів!')
+        }else if(userTrapResult != rabbitInitialPosition){
+            rabbitInitialPosition = random;
+            console.log('Спробуй знову!');
+            usersTrapColumn = parseInt(prompt('Вкажіть стовбчик в якому хочете покласти пастку'));
+            usersTrapRow = parseInt(prompt('Вкажіть рядок в якому хочете покласти пастку'));
+            if(usersTrapColumn == 1 && usersTrapRow == 1){
+            userTrapResult = 1;
+            }else if(usersTrapColumn == 2 && usersTrapRow == 1){
+            userTrapResult = 2;
+            }else if(usersTrapColumn == 1 && usersTrapRow == 2){
+            userTrapResult = 3;
+            }else if(usersTrapColumn == 2 && usersTrapRow == 2){
+            userTrapResult = 4;
+            }
+            if(userTrapResult == rabbitInitialPosition){
+                console.log('Заєць попав в вашу пастку з другої спроби! Ви отримали: 50 балів!')
+            }else{
+                console.log('Заєць надто спритний, ви програли!')
+            }
+        }
+    </script>
+</body>
+</html>

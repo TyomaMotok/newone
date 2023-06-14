@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+let randomNumber = Math.floor(Math.random() * 10) + 1;
+console.log(randomNumber);
+let userOne = prompt('Як вас звуть?');
+let userOneAttempt = parseInt(prompt(`Компуктер, згенерував рандомне число, в діапазоні від 1 до 10, спробуйте відгадати згенероване число, або найближче до нього!`));
+let userTwo = prompt(`Сьогодні ваш супротивник ${userOne}, як до вас можна звертатись?`);
+let userTwoAttempt = parseInt(prompt(`${userOne}, компуктер, згенерував рандомне число, в діапазоні від 1 до 10, спробуйте відгадати згенероване число, або найближче до нього!`));
+
+let userOneResult = Math.abs(randomNumber - userOneAttempt);
+let userTwoResult = Math.abs(randomNumber - userTwoAttempt);
+
+
+console.log(userOneResult);
+console.log(userTwoResult);
+
+if(userOneResult == userTwoResult){
+  document.write('Нічия! Обоє ввели теж саме число!')
+}else if(userOneResult < userTwoResult){
+  document.write(`Користувач, ${userOne} - переможець!`);
+}else if(userTwoResult < userOneResult){
+  document.write(`Користувач, ${userTwo} - переможець!`);
+}
+</script>
+</body>
+</html>
+
+<!-- 8/7 -->

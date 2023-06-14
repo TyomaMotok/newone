@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let userOne = confirm('Нажміть "Ок", коли будете готові зробити свій перший кидок!');
+        let randomUserOne = Math.floor(Math.random() * (7 - 1 + 1)) + 1;
+        let userOnePoints;
+        if(userOne){
+            userOne = randomUserOne;
+            console.log(userOne);
+            console.log(`Вам випало ребро з цифрою ${userOne}, та ви отримали ${userOne} балів.`);
+            let secondTryYesOrNo =  confirm('Чи готові ви зробити другий кидок?');
+            if(secondTryYesOrNo){
+                let randomSecondTry = Math.floor(Math.random() * (7 - 1 + 1)) + 1;
+                let userOneSecondTry = randomSecondTry;
+                if(userOneSecondTry % 2 == 0){
+                    userOnePoints = userOne + userOneSecondTry;
+                    console.log(`Вітаємо! К-сть балів збільшена на ${userOneSecondTry}. Загальна к-сть балів ${userOnePoints}`)
+                }else{
+                    userOnePoints = userOne - userOneSecondTry;
+                    console.log(`Упс! Ваші бали щойно зменшились на ${userOneSecondTry}. Загальна к-сть балів ${userOnePoints}`)
+                }
+            }else if(!secondTryYesOrNo){
+                userOnePoints = userOne;
+                console.log(`Користувач 1, ваша загальна к-сть балів: ${userOnePoints};`);
+            }
+        }
+
+        let userTwo = confirm('Користувач 2, нажміть "Ок", коли будете готові зробити свій перший кидок!');
+        let randomUserTwo = Math.floor(Math.random() * (7 - 1 + 1)) + 1;
+        let userTwoPoints;
+
+        if(userTwo){
+            userTwo = randomUserTwo;
+            console.log(userTwo);
+            console.log(`Вам випало ребро з цифрою ${userTwo}, та ви отримали ${userTwo} балів.`);
+            let secondTryYesOrNo =  confirm('Чи готові ви зробити другий кидок?');
+            if(secondTryYesOrNo){
+                let randomSecondTry = Math.floor(Math.random() * (7 - 1 + 1)) + 1;
+                let userTwoSecondTry = randomSecondTry;
+                if(userTwoSecondTry % 2 == 0){
+                    userTwoPoints = userTwo + userTwoSecondTry;
+                    console.log(`Вітаємо! К-сть балів збільшена на ${userTwoSecondTry}. Загальна к-сть балів ${userTwoPoints}`)
+                }else{
+                    userTwoPoints = userTwo - userTwoSecondTry;
+                    console.log(`Упс! Ваші бали щойно зменшились на ${userTwoSecondTry}. Загальна к-сть балів ${userTwoPoints}`)
+                }
+            }else if(!secondTryYesOrNo){
+                userTwoPoints = userTwo;
+                console.log(`Користувач 1, ваша загальна к-сть балів: ${userTwoPoints};`);
+            }
+        }
+
+        if(userTwoPoints > userOnePoints){
+            let difference = userTwoPoints - userOnePoints;
+            console.log(`Вітаємо, користувач 2, ви отримали ${userTwoPoints} балів, на ${difference} бали більше аніж Користувач 1`);
+        }else if(userTwoPoints < userOnePoints){
+            let difference = userOnePoints - userTwoPoints;
+            console.log(`Вітаємо, користувач 1, ви отримали ${userOnePoints} балів, на ${difference} бали більше аніж Користувач 1`);
+        }else if(userTwoPoints == userOnePoints){
+            console.log('Нічия!')
+        }
+
+    </script>
+</body>
+</html>

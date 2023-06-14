@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  i{
+    font-size: 0;
+  }
+
+</style>
+<body>
+  <ol style="font-size: 30px; text-transform: uppercase;" class="list">
+    <li>Веселий</li>
+    <i class="fa-solid fa-face-smile smile"></i>
+    <li>Сумний</li>
+    <i class="resentful fa-solid fa-face-sad-tear sad"></i>
+    <li>Обурений</li>
+    <i class="fa-solid fa-face-sad-cry"></i>
+  </ol>
+  <i class="fa-solid fa-face-pensive pensive"></i>
+</body>
+<script defer src="https://kit.fontawesome.com/cc13bab69b.js" crossorigin="anonymous"></script>
+<script>
+  let chooseANumber = parseInt(prompt('Виберіть настрій цифрою! 1. Happy | 2. Sad | 3. Resentful'));
+  let happy = document.querySelector('.smile');
+  let sad = document.querySelector('.sad');
+  let sadWithTears = document.querySelector('.fa-face-pensive');
+  if(chooseANumber == 1){
+    happy.style.fontSize = '140px';
+  }else if(chooseANumber == 2){
+    sad.style.fontSize = '140px';
+  }else if(chooseANumber == 3){
+    sadWithTears.style.fontSize = '140px';
+  }
+</script>
+</html>

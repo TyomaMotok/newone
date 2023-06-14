@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let squaresAmount = parseInt(prompt('Введіть к-сть квадратиків, 2+', '5'));
+        let shipPosition = Math.floor(Math.random() * squaresAmount) + 1;
+        let shoot = parseInt(prompt(`В діапазоні від 1 до ${squaresAmount}, знаходиться кораблик - введи цифру, та спробуй потопити його!`));
+
+        if (shoot == shipPosition){
+            console.log(`Кораблик потоплено!`)
+        }else if(shoot == shipPosition++ || shoot == shipPosition--){
+            console.log(`Кораблик пошкоджено!!`);
+            let destroyTheShip = parseInt(prompt('А зараз, спробуй потопити кораблик!!!'));
+            if(destroyTheShip == shipPosition){
+                console.log(`Кораблик потоплено! Ви виграли!`);
+            }else{
+                console.log(`Нажаль ви програли!`);
+                console.log(`Кораблик знаходився в ${shipPosition} квадратику!`);
+            }
+        }else{
+            console.log('Ви не попали!')
+            let secondTry = parseInt(prompt('У вас залишилась 1 спроба, спробуйте потопити кораблик!'));
+            if(secondTry == shipPosition){
+                console.log('О, чудо! Ви зробили це, кораблик потоплено!')
+            }else if(shoot == shipPosition++ || shoot == shipPosition--){
+                console.log('Кораблик пошкоджено, але нажаль вам не вдалось його потопити!')
+            }else{
+                console.log('Oops, ви програли!')
+                console.log(`Кораблик знаходився в ${shipPosition} квадратику!`);
+            }
+        }
+    </script>
+</body>
+</html>
