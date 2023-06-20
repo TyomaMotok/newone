@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+'use strict'
+//Вводиться назва предмета. Вивести кабінет, у якому проводиться ця дисципліна
+// math -302
+//history -213
+//geography - 102
+
+const mathCabinetNum = 302;
+const historyCabinetNum = 213;
+const geographyCabinetNum = 102;
+let subjectName = prompt('Введіть назву кабінета!');
+
+switch(subjectName){
+case 'math':
+alert(`Вам потрібний кабінет під номером: ${mathCabinetNum}`);
+break;
+case 'history':
+alert(`Вам потрібний кабінет під номером: ${historyCabinetNum}`);
+break;
+case 'geography':
+alert(`Вам потрібний кабінет під номером: ${geographyCabinetNum}`);
+break;
+
+default:
+alert('Йди на фізру')
+break;
+}
+</script>
+</body>
+</html>

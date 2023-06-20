@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+'use strict'
+// 10.	Знайти найбільше парне число серед 4-х цілих чисел.  (число %2 === 0)
+let num1 = parseFloat(prompt('Num 1'))
+let num2 = parseFloat(prompt('Num 2'))
+let num3 = parseFloat(prompt('Num 3'))
+let num4 = parseFloat(prompt('Num 4'))
+let max;
+
+if(num1 % 2 === 0) max = num1;
+if(num2 % 2 === 0 && num2 > max) max = num2;
+if(num3 % 2 === 0 && num3 > max) max = num3;
+if(num4 % 2 === 0 && num4 > max) max = num4;
+
+alert(max);
+</script>
+</body>
+</html>

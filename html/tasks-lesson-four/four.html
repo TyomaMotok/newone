@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+'use strict'
+// Числа змінються у діапазоні  5-78;
+const typedNum = parseInt(prompt('Type a number, pls!'));
+const minNum = 5;
+const maxNum = 78;
+let diapason = (typedNum - minNum) % (maxNum - minNum + 1) + 5;
+alert(diapason);
+</script>
+</body>
+</html>
