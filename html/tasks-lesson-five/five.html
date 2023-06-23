@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+'use strict'
+// Задача 1. Вивести з використанням циклів маркований список з випадковими числами (1-100). Кількість випадкових чисел вводиться користувачем. Приклад:
+let amountOfNumbers = parseInt(prompt('Скільки рандомних цифер вивести?'));
+for(let i = 0; i < amountOfNumbers; i++){
+    let random = 1 + Math.floor(Math.random() * 100);
+    document.write(`<ul><li>${random}</li></ul>`)
+}
+</script>
+</body>
+</html>

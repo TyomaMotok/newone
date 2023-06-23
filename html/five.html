@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="icon" type="image/png" href="img/JavaScript.png">
+    <title>Lesson 2</title>
+</head>
+<body>    
+</body>
+<style>
+    tr{
+        font-size: 30px;
+    }
+</style>
+<div class="tasks">
+    <a href="tasks-lesson-three/first.html" class="task">Task 1</a>
+</div>
+<script>
+    let tasks = document.querySelector('.tasks');
+    let tasksChildren = tasks.children;
+
+    for (let i = 0; i < tasksChildren.length; i++) {
+        if ((i + 1) % 2 === 0) {
+            let childElement = tasksChildren[i];
+            childElement.style.cssText = `background-color: #77608d;`;
+        }
+    }
+</script>
+</html>

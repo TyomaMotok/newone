@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+'use strict'
+// Морський бій. Комп’ютер випадково розташовує одиночний корабель на полі розміром N*M. Маючи К снарядів користувач намагається потопити корабель. 
+
+//формування поля.
+const amountOfColumns = parseInt(prompt('Введіть к-сть стовпчиків'));
+const amountOfRows = parseInt(prompt('Введіть к-сть рядків'));
+const amountOfBombs = 1 + Math.floor(Math.random() * 5);
+const shipPositionColumn = 1 + Math.floor(Math.random() * amountOfColumns);
+const shipPositionRow = 1 + Math.floor(Math.random() * amountOfRows);
+
+console.log(`(Підсказка, кораблик знаходиться в рядку: ${shipPositionRow}, та стовпчику ${shipPositionColumn}`);
+
+for(let attempts = 1; attempts <= amountOfBombs; attempts++){
+    let guessTheRow = parseInt(prompt('В якому рядку?'));
+    let guessTheColumn = parseInt(prompt('В якому стовпчику?'));
+    if(guessTheRow === shipPositionRow && guessTheColumn === shipPositionColumn){
+        alert(`Влучно, кораблик знаходився в рядку: ${shipPositionRow}, та стовпчику ${shipPositionColumn}, ви попали прямо в нього!`)
+        break;
+    }else{
+        alert(`Нажаль ви не попали, у вас залишилось ${amountOfBombs - attempts} спроби`)
+    }
+}
+
+</script>
+</body>
+</html>

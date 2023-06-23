@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+'use strict'
+//Задача. 15 разів вивести слово "Hello"
+// for(let i = 1; i <= 15; i++){
+//     document.write('Hello ');
+// }
+//Задача. З клавіатури вводиться 5 пар цілих чисел. Якщо числа рівні, то вивести їх суму, інакше – добуток
+// for (let num = 0; num < 5; num++){
+//     let userNum = parseInt(prompt('Введіть число!'));
+//     let userNum2 = parseInt(prompt('Введіть число номер 2!'));
+//     if(userNum === userNum2){
+//         alert(userNum + userNum2);
+//     }else(userNum * userNum2);
+// }
+//Задача. З клавіатури 6 разів генерується ціле число в межах від 1 до 10 і кожного разу дається можливість користувачу вгадати число.
+// let guessedCount = 0;
+// for (let num = 0; num < 6; num++){
+//     let random = 1 + Math.floor(Math.random() * 10);
+//     console.log(random)
+//     let userGuess = parseInt(prompt('Вгадайте число'));
+//     if(userGuess === random){
+//         guessedCount++
+//     }
+// }
+// console.log(`Ви вгадали ${guessedCount} разів`);
+
+//Задача. Поступово вводяться вартості 7 товарів. Знайти загальну вартість
+// let sum = 0;
+// for(let productNum = 1; productNum <= 7; productNum++){
+// const productPrice = parseInt(prompt(`Введіть вартість товару номер ${productNum}`));
+// sum = sum + productPrice;
+// }
+// console.log(`Загальна вартість становить: ${sum}`)
+
+//Задача. Вводиться прибуток магазину за 3 тижні
+//   (для кожного тижня вводиться прибуток за робочі дні 1-5). Знайти загальну суму
+// let sum = 0;
+// for (let weeks = 1; weeks <= 3; weeks++){
+//     let weekSum = 0;
+//     for(let days = 1; days <= 5; days++){
+//         let income = parseFloat(prompt(`Прибуток за день ${days}, тижня номер ${weeks}`));
+//         console.log(`Прибуток за день ${days} складає: ${income}`)
+//         sum += income;
+//         weekSum += income;
+//     }
+//     console.log(`Прибуток за тиждень ${weeks} складає: ${weekSum}`)
+// }
+// console.log(`Прибуток за 3 тижні, складає: ${sum}`)
+
+//Задача. Вивести номери місяців другого півріччя (номери місяців від 6 до 12)
+// for(let month = 6; month <= 12; month++){
+//     console.log(month);
+// }
+//Задача. Вивести суми сплаченого кредиту. Початковий внесок 5000грн, кінцевий 15000 грн, а щомісячний внесок 2000грн.
+// let debtPaid = 5000;
+// for(debtPaid; debtPaid <= 15000;){
+//     let payment = parseInt(prompt(`Ви сплатили ${debtPaid} грн боргу, залишилось ще ${15000 - debtPaid}, введіть свій внесок!`));
+//     debtPaid += payment;
+//     if(debtPaid === 15000) break;
+// }
+// alert('Дякуємо, сума цілком сплачена')
+
+//Приклад. «Тренажер додавання». Розробити програму для перевірки знань з додавання цілих чисел в межах від 1 до 3(перебрати усі можливі комбінації додавання цілих чисел (тобто перше число перебрати від 1 до 3 і для кожного першого числа перебрати числа від 1 до 5). Іншими словами:
+//  1+1, 1+2, 1+3
+// 2+1, 2+2, 2+3
+// 3+1, 3+2, 3+3
+
+// for(let num1 = 1; num1 <= 3; num1++){
+//     for(let num2 = 1; num2 <= 5; num2++){
+//         console.log(`${num1} + ${num2}`);
+//     }
+// }
+
+// Приклад*. «Тренажер множення». Розробити програму, яка випадковим чином (4 рази) генерує перше число в межах від 1 до 9, друге число від 1 до 9 і перевірити чи знає користувач, чому дорівнює результат їх множення. Підрахувати кількість правильних відповідей.
+
+// let correctAnswersSum = 0;
+// for (let i = 0; i < 4; i++){
+//     let randomNumOne = 1 + Math.floor(Math.random() * 9);
+//     let randomNumTwo = 1 + Math.floor(Math.random() * 9);
+//     let userResult = parseFloat(prompt(`Multiplication of ${randomNumOne} on ${randomNumTwo} equals:`));
+//     if(userResult === (randomNumOne * randomNumTwo)){
+//         console.log(`Yes, ${userResult}, is the correct answer!`)
+//         correctAnswersSum++
+//     }else{
+//         console.log(`Nope, multiplication of ${randomNumOne} on ${randomNumTwo} is not equal to ${userResult}`)
+//     }
+// }
+// console.log(`You have gained ${correctAnswersSum} correct answers out of 4 possible.;`);
+
+// Вводимо початкову кількість булочок, які треба продати.  Поки залишаються булочки продавати їх клієнтам
+// let amountOfMuffins = parseInt(prompt('Вводимо початкову кількість булочок, які треба продати.'));
+
+// while(amountOfMuffins > 0){
+//     let attemptToSell = parseInt(prompt('Скільки булочок ви бажаєте придбати?'));
+//     if(attemptToSell <= amountOfMuffins){
+//         amountOfMuffins -= attemptToSell;
+//         alert('Дякую за покупку!')
+//     }else{
+//         alert('Вибачте, у нас більше не залишилось булочок!')
+//     }
+// }
+// alert('Товар продано!');
+
+//З клавіатури вводяться поступово двоцифрові числа. Знаходимо їх добуток поки не буде введено 0.
+// let sum = 1;
+// let userNum;
+// do{
+//     userNum = parseInt(prompt('Введіть число!'));
+//     sum *= userNum;
+//     console.log(sum);
+// }
+// while(userNum !== 0)
+
+//Приклади*. 3 рази дати можливість ввести пароль (правильний пароль «123»).
+// for (let passwordAttempts = 1; passwordAttempts <= 3; passwordAttempts++){
+//     let password = prompt('Введіть пароль!');
+//     if (password == '123'){
+//         alert('Ви ввели правельний пароль.')
+//         break;
+//     }else alert(`У вас залишились ${3 - passwordAttempts} спроби!`)
+// }
+
+//Дано 3 сайти, на яких користувач хоче купити по 2 товари. Але якщо гроші закнчились, то зрозумло, що покупка припиняється;
+
+// let userMoney = parseInt(prompt('Скільки у вас грошей?'));
+// let productPrice = 20;
+// exit: for (let webpageNum = 1; webpageNum <= 3; webpageNum++){
+//     for(let productNum = 1; productNum <= 2; productNum++){
+//         if(productPrice <= userMoney){
+//             if(confirm('Купуєте?')){
+//                 alert('Продано.')
+//                 userMoney -= productPrice;
+//             }else{
+//                 continue;
+//             }
+//         }
+//         if(userMoney === 0){
+//             alert('Упс, у вас більше не має коштів');
+//             break exit;
+//         }
+//     }
+// }
+
+// //Знайти найбільші 2 числа з 4-х цілих чисел.
+// const num1 = parseInt(prompt('Введіть число!'));
+// const num2 = parseInt(prompt('Введіть число!'));
+// const num3 = parseInt(prompt('Введіть число!'));
+// const num4 = parseInt(prompt('Введіть число!'));
+
+// let max1 = -Infinity;
+// let max2 = -Infinity;
+
+// if(num1 > max1){
+//     max2 = max1;
+//     max1 = num1;
+// }else  if(num1 > max2){
+//     max2 = num1;
+// }
+
+// if(num2 > max1){
+//     max2 = max1;
+//     max1 = num2;
+// }else if(num2 > max2){
+//     max2 = num2;
+// }
+
+// if(num3 > max1){
+//     max2 = max1;
+//     max1 = num3;
+// }else if(num3 > max2){
+//     max2 = num3;
+// }
+
+// if(num4 > max1){
+//     max2 = max1;
+//     max1 = num4;
+// }else if(num4 > max2){
+//     max2 = num4;
+// }
+
+// console.log(`Найбільше 1: ${max1}, Найбільше 2: ${max2};`)
+</script>
+</body>
+</html>
