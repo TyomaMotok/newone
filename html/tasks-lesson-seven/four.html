@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Задача 4. Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька результатів: кількість парних, кількість додатних, кількість більших за 100.
+
+        function pairedNum(a, b, c){
+        let pairedNum = 0;
+        if (a % 2 === 0) pairedNum++;
+        if (b % 2 === 0) pairedNum++;
+        if (c % 2 === 0) pairedNum++;
+        return pairedNum;
+        }
+
+        function positiveNum(a, b, c) {
+        let positiveNumAmount = 0;
+        if (a >= 0) positiveNumAmount++;
+        if (b >= 0) positiveNumAmount++;
+        if (c >= 0) positiveNumAmount++;
+        return positiveNumAmount;
+        }
+
+        function moreThanHundredNum(a, b, c) {
+        let moreThanHundredAmountOfNum = 0;
+        if (a > 100) moreThanHundredAmountOfNum++;
+        if (b > 100) moreThanHundredAmountOfNum++;
+        if (c > 100) moreThanHundredAmountOfNum++;
+        return moreThanHundredAmountOfNum;
+        }
+
+        function universalFunc(a, b, c) {
+        let paired = pairedNum(a, b, c);
+        let positiveNumAmount = positiveNum(a, b, c);
+        let moreThanHundredAmountOfNum = moreThanHundredNum(a, b, c);
+
+        console.log("Парные числа:", paired);
+        console.log("Положительные числа:", positiveNumAmount);
+        console.log("Числа больше 100:", moreThanHundredAmountOfNum);
+        }
+
+        universalFunc(10, 20, -3);
+
+        // function pairedNum(a, b, c){
+        // let pairedNum = 0;
+        // if (a % 2 === 0) pairedNum++;
+        // if (b % 2 === 0) pairedNum++;
+        // if (c % 2 === 0) pairedNum++;
+        // return pairedNum;
+        // }
+
+        // function universalFunc(a, b, c) {
+        //     let paired = pairedNum(a, b, c);
+        //     console.log(`К-сть парних: ${paired}`);
+        // }
+
+        // universalFunc(10, 11, 30)
+    </script>
+</body>
+</html>

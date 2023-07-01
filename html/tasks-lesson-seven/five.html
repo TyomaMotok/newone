@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Задача 5. Створити окремі функції, які переводять:
+    // Сантиметри у дюйми;
+    // Кілограми у фунти;
+    // Кілометри у милі.
+
+    // function cmToInches (cm){
+    //     return cm / 2.54;
+    // }
+    // function kgToPound (kg){
+    //     return kg * 2.2;
+    // }
+    // function kmToMiles (km){
+    //     return km / 1.6;
+    // }
+    let inch = (cm) => cm / 2.54;
+    let pounds = (kg) => kg * 2.2;
+    let miles = (km) => km / 1.6;
+
+    let cmLength = parseInt(prompt('cm?'));
+    let poundsWeight = parseInt(prompt('lb?'));
+    let kmLength = parseInt(prompt('km?'));
+
+    console.log(inch(cmLength));
+    console.log(pounds(poundsWeight))
+    console.log(miles(kmLength));
+    
+    </script>
+</body>
+</html>

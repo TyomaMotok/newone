@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Задача 10. Дано покази температур (довільна кількість). Розробити функцію, яка дозволить знайти середнє значення для додатних показів температури. -->
+    <script>
+        let tempPositiveSum = 0;
+        let amountOfTempPrompt = parseInt(prompt('Скільки показників температури потрібно?'));
+
+        for(let i = 1; i <= amountOfTempPrompt; i++){
+            let userTemp = parseFloat(prompt(`Введіть показник темп номер ${i}`));
+            if(userTemp > 0){
+                tempPositiveSum += userTemp;
+            }
+        }
+
+        let meanValue = (summed, amount) => summed / amount;
+
+        let meanTempValue = meanValue(tempPositiveSum, amountOfTempPrompt);
+        alert(meanTempValue);
+    </script>
+</body>
+</html>

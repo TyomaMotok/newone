@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let monthNum = () => parseInt(prompt('Привіт, введи номер місяця!'));
+        let seasonNum = monthNum();
+        
+        function yearSeason (){
+            let result;
+            switch(seasonNum){
+                case 12 :
+                case 1:
+                case 2:
+                result = 'Currently it is winter!';
+                break;
+                case 3 :
+                case 4:
+                case 5:
+                result = 'Currently it is spring!';
+                break;
+                case 6 :
+                case 7:
+                case 8:
+                result = 'Currently it is summer!';
+                break;
+                case 9:
+                case 10:
+                case 11:
+                result = 'Currently it is autumn!';
+                break;
+                default: result = 'Only God knows.'
+                break;
+            }
+            return result;
+        }
+        document.write(yearSeason());
+    </script>
+</body>
+</html>

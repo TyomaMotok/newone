@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Задача 7. Створити функцію, яка випадковим чином виводить на екран одне із 4 зображень (шляхи до зображень передаються у функцію)
+    let random = Math.floor(Math.random() * 4) + 1;
+    let showImage = (imgNum) => document.write(`<img src="img/${imgNum}.jpg" alt="">`);
+
+    showImage(random);
+    </script>
+</body>
+</html>
